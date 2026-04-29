@@ -19,6 +19,7 @@ ui_text = {
     "en": {
         "app_title": "📘 The Journey of the Be Like Brit Kids",
         "app_sub": "Inspiring stories of hope, resilience, and love from Haiti – built by Gesner Deslandes",
+        "app_authors": "Authored by: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
         "sidebar_company": "🌐 GlobalInternet.py",
         "sidebar_founder": "👨‍💻 Gesner Deslandes – Storyteller & Python Builder",
@@ -40,6 +41,7 @@ ui_text = {
     "fr": {
         "app_title": "📘 Le Voyage des Enfants de Be Like Brit",
         "app_sub": "Histoires inspirantes d'espoir, de résilience et d'amour d'Haïti – construit par Gesner Deslandes",
+        "app_authors": "Auteurs : Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
         "sidebar_company": "🌐 GlobalInternet.py",
         "sidebar_founder": "👨‍💻 Gesner Deslandes – Conteur & Constructeur Python",
@@ -61,6 +63,7 @@ ui_text = {
     "es": {
         "app_title": "📘 El Viaje de los Niños de Be Like Brit",
         "app_sub": "Historias inspiradoras de esperanza, resiliencia y amor desde Haití – construido por Gesner Deslandes",
+        "app_authors": "Autores: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
         "sidebar_company": "🌐 GlobalInternet.py",
         "sidebar_founder": "👨‍💻 Gesner Deslandes – Narrador & Constructor Python",
@@ -148,7 +151,7 @@ chapters_en = [
     }
 ]
 
-# ---------- FRENCH TRANSLATIONS ----------
+# ---------- FRENCH CHAPTERS ----------
 chapters_fr = [
     {
         "title": "Chapitre 1 : Un nouveau départ",
@@ -212,7 +215,7 @@ chapters_fr = [
     }
 ]
 
-# ---------- SPANISH TRANSLATIONS ----------
+# ---------- SPANISH CHAPTERS ----------
 chapters_es = [
     {
         "title": "Capítulo 1: Un nuevo comienzo",
@@ -403,8 +406,15 @@ with st.sidebar:
 
 # ---------- MAIN PAGE ----------
 def main():
+    # Display header with authors
     st.markdown(
-        f'<div class="main-header"><h1>{_("app_title")}</h1><p>{_("app_sub")}</p></div>',
+        f"""
+        <div class="main-header">
+            <h1>{_("app_title")}</h1>
+            <p>{_("app_sub")}</p>
+            <p style="font-size:0.9rem; margin-top:0.5rem; opacity:0.9;">{_("app_authors")}</p>
+        </div>
+        """,
         unsafe_allow_html=True
     )
     
