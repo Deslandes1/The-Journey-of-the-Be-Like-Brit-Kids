@@ -75,10 +75,10 @@ def _(key):
 # ---------- CHAPTERS: ENGLISH ----------
 chapters_en = [
     {
-        "title": "Chapter 1: A New Beginning",
+        "title": "Be Like Brit Location on the mountain top in Grand Goave national road # 2",
         "image": "https://raw.githubusercontent.com/Deslandes1/The-Journey-of-the-Be-Like-Brit-Kids/main/home.jpg",
-        "text": "The sun rose over the mountains of Grand‑Goâve, painting the sky in shades of orange and pink. Marie, a seven‑year‑old girl with bright eyes and braided hair, stood at the gate of Be Like Brit. She had arrived just the day before, scared and silent. Her parents had passed away, and she had no one left. But when she stepped inside, she was greeted by the warmest smiles. Mama Nerlande took her hand and said, 'You are home now, little one.' Marie looked around at the other children playing football and laughing. For the first time in weeks, she felt a tiny spark of hope. That night, she ate a hot meal and slept in a soft bed. In the morning, she woke to the sound of children singing. Marie smiled. Her new journey had begun.",
-        "caption": "The gate of Be Like Brit in Grand‑Goâve"
+        "text": "Britney Gengel was a young American woman who fell in love with Haiti and its children. During a mission trip in January 2010, she called her parents from her cell phone just before the devastating earthquake struck. With tears in her voice, she said, 'I love you, and I want to come back here and build an orphanage for these beautiful kids.' Minutes later, the earth shook. Britney lost her life in the rubble, but her dream did not die. Her parents, Len and Cherylann Gengel, decided to make her wish come true. They founded the Be Like Brit Foundation and built a safe, earthquake‑resistant orphanage on a mountaintop in Grand‑Goâve, overlooking National Road #2. The building is shaped like a 'B' – for Brit. Today, dozens of children live, learn, and play there, surrounded by love and opportunity. This is the story of a girl who dreamed of giving a home, and of a community that made that dream a reality.",
+        "caption": "The Be Like Brit orphanage seen from above – a 'B' shape on the mountain"
     },
     {
         "title": "Chapter 2: The First Day of School",
@@ -139,10 +139,10 @@ chapters_en = [
 # ---------- CHAPTERS: FRENCH ----------
 chapters_fr = [
     {
-        "title": "Chapitre 1 : Un nouveau départ",
+        "title": "Emplacement de Be Like Brit sur la montagne à Grand‑Goâve route nationale #2",
         "image": chapters_en[0]["image"],
-        "text": "Le soleil se leva sur les montagnes de Grand‑Goâve, peignant le ciel de nuances d'orange et de rose. Marie, une fillette de sept ans aux yeux vifs et aux cheveux tressés, se tenait à la porte de Be Like Brit. Elle était arrivée la veille, effrayée et silencieuse. Ses parents étaient décédés, et elle n'avait plus personne. Mais lorsqu'elle entra, elle fut accueillie par les plus chaleureux sourires. Maman Nerlande lui prit la main et dit : « Tu es chez toi maintenant, petite. » Marie regarda autour d'elle, les autres enfants jouant au football et riant. Pour la première fois depuis des semaines, elle ressentit une petite étincelle d'espoir. Cette nuit‑là, elle mangea un repas chaud et dormit dans un lit douillet. Au matin, elle se réveilla au son des chants des enfants. Marie sourit. Son nouveau voyage avait commencé.",
-        "caption": "La porte de Be Like Brit à Grand‑Goâve"
+        "text": "Britney Gengel était une jeune Américaine qui est tombée amoureuse d'Haïti et de ses enfants. Lors d'un voyage missionnaire en janvier 2010, elle a appelé ses parents sur son téléphone portable juste avant que le violent tremblement de terre ne frappe. La voix chargée d'émotion, elle a dit : « Je vous aime, et je veux revenir ici pour construire un orphelinat pour ces magnifiques enfants. » Quelques minutes plus tard, la terre a tremblé. Britney a perdu la vie dans les décombres, mais son rêve n'est pas mort. Ses parents, Len et Cherylann Gengel, ont décidé de réaliser son vœu. Ils ont fondé la Fondation Be Like Brit et ont construit un orphelinat sûr, résistant aux séismes, au sommet d'une montagne à Grand‑Goâve, surplombant la route nationale #2. Le bâtiment a la forme d'un « B » – pour Brit. Aujourd'hui, des dizaines d'enfants y vivent, apprennent et jouent, entourés d'amour et de chances. Voici l'histoire d'une jeune fille qui a rêvé de donner un foyer, et d'une communauté qui a fait de ce rêve une réalité.",
+        "caption": "L'orphelinat Be Like Brit vu du ciel – une forme de 'B' sur la montagne"
     },
     {
         "title": "Chapitre 2 : Le premier jour d'école",
@@ -203,10 +203,10 @@ chapters_fr = [
 # ---------- CHAPTERS: SPANISH ----------
 chapters_es = [
     {
-        "title": "Capítulo 1: Un nuevo comienzo",
+        "title": "Ubicación de Be Like Brit en la montaña en Grand‑Goâve carretera nacional #2",
         "image": chapters_en[0]["image"],
-        "text": "El sol se levantó sobre las montañas de Grand‑Goâve, pintando el cielo en tonos naranja y rosa. Marie, una niña de siete años con ojos brillantes y cabello trenzado, estaba en la puerta de Be Like Brit. Había llegado el día anterior, asustada y en silencio. Sus padres habían fallecido y no le quedaba nadie. Pero cuando entró, fue recibida por las sonrisas más cálidas. Mamá Nerlande le tomó la mano y dijo: «Ahora estás en casa, pequeña». Marie miró a los demás niños que jugaban al fútbol y reían. Por primera vez en semanas, sintió una pequeña chispa de esperanza. Esa noche comió una comida caliente y durmió en una cama suave. Por la mañana, se despertó con el canto de los niños. Marie sonrió. Su nuevo viaje había comenzado.",
-        "caption": "La puerta de Be Like Brit en Grand‑Goâve"
+        "text": "Britney Gengel era una joven estadounidense que se enamoró de Haití y sus niños. Durante un viaje misionero en enero de 2010, llamó a sus padres por teléfono celular justo antes de que el devastador terremoto golpeara. Con voz entrecortada, dijo: «Los quiero, y quiero regresar aquí para construir un orfanato para estos hermosos niños». Unos minutos después, la tierra tembló. Britney perdió la vida entre los escombros, pero su sueño no murió. Sus padres, Len y Cherylann Gengel, decidieron hacer realidad su deseo. Fundaron la Fundación Be Like Brit y construyeron un orfanato seguro y resistente a terremotos en la cima de una montaña en Grand‑Goâve, con vista a la carretera nacional #2. El edificio tiene forma de «B» – por Brit. Hoy, decenas de niños viven, aprenden y juegan allí, rodeados de amor y oportunidades. Esta es la historia de una joven que soñó con dar un hogar, y de una comunidad que hizo ese sueño realidad.",
+        "caption": "El orfanato Be Like Brit visto desde arriba – una forma de 'B' en la montaña"
     },
     {
         "title": "Capítulo 2: El primer día de escuela",
