@@ -20,8 +20,7 @@ ui_text = {
         "app_title": "📘 The Journey of the Be Like Brit Kids",
         "app_sub": "Inspiring stories of hope, resilience, and love from Haiti – built by Gesner Deslandes",
         "app_authors": "Authored by: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
-        "sidebar_logo": "📘",
-        "sidebar_website": "🌍 Visit our website",
+        "sidebar_website": "🌍 Visit Be Like Brit",
         "sidebar_book_title": "📖 The Journey of the Be Like Brit Kids",
         "sidebar_book_desc": "Inspiring stories of hope, resilience, and love from Haiti",
         "sidebar_caption": "Built by Gesner Deslandes – GlobalInternet.py",
@@ -38,8 +37,7 @@ ui_text = {
         "app_title": "📘 Le Voyage des Enfants de Be Like Brit",
         "app_sub": "Histoires inspirantes d'espoir, de résilience et d'amour d'Haïti – construit par Gesner Deslandes",
         "app_authors": "Auteurs : Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
-        "sidebar_logo": "📘",
-        "sidebar_website": "🌍 Visitez notre site web",
+        "sidebar_website": "🌍 Visitez Be Like Brit",
         "sidebar_book_title": "📖 Le Voyage des Enfants de Be Like Brit",
         "sidebar_book_desc": "Histoires inspirantes d'espoir, de résilience et d'amour d'Haïti",
         "sidebar_caption": "Construit par Gesner Deslandes – GlobalInternet.py",
@@ -56,8 +54,7 @@ ui_text = {
         "app_title": "📘 El Viaje de los Niños de Be Like Brit",
         "app_sub": "Historias inspiradoras de esperanza, resiliencia y amor desde Haití – construido por Gesner Deslandes",
         "app_authors": "Autores: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
-        "sidebar_logo": "📘",
-        "sidebar_website": "🌍 Visite nuestro sitio web",
+        "sidebar_website": "🌍 Visite Be Like Brit",
         "sidebar_book_title": "📖 El Viaje de los Niños de Be Like Brit",
         "sidebar_book_desc": "Historias inspiradoras de esperanza, resiliencia y amor desde Haití",
         "sidebar_caption": "Construido por Gesner Deslandes – GlobalInternet.py",
@@ -75,7 +72,7 @@ ui_text = {
 def _(key):
     return ui_text[st.session_state.lang].get(key, key)
 
-# ---------- CHAPTERS DATA (ENGLISH) ----------
+# ---------- CHAPTERS: ENGLISH ----------
 chapters_en = [
     {
         "title": "Chapter 1: A New Beginning",
@@ -139,7 +136,7 @@ chapters_en = [
     }
 ]
 
-# ---------- FRENCH CHAPTERS ----------
+# ---------- CHAPTERS: FRENCH ----------
 chapters_fr = [
     {
         "title": "Chapitre 1 : Un nouveau départ",
@@ -203,7 +200,7 @@ chapters_fr = [
     }
 ]
 
-# ---------- SPANISH CHAPTERS ----------
+# ---------- CHAPTERS: SPANISH ----------
 chapters_es = [
     {
         "title": "Capítulo 1: Un nuevo comienzo",
@@ -277,7 +274,6 @@ language_map = {
 # ---------- CUSTOM CSS (BLUE THEME) ----------
 st.markdown("""
 <style>
-    /* Main background and text */
     .stApp {
         background: linear-gradient(135deg, #e6f0ff 0%, #cce4ff 100%);
     }
@@ -315,10 +311,13 @@ st.markdown("""
         border-radius: 20px;
         color: #1e3c72;
     }
-    .sidebar-logo {
-        text-align: center;
-        font-size: 3rem;
-        margin-bottom: 1rem;
+    .sidebar-image {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 1rem auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     .pulse-dot {
         display: inline-block;
@@ -377,11 +376,16 @@ selected_lang_name = st.sidebar.selectbox(
 st.session_state.lang = lang_options[selected_lang_name]
 chapters = language_map[st.session_state.lang]
 
-# ---------- SIDEBAR CONTENT (UPDATED: ONLY LOGO, BOOK INFO, WEBSITE LINK, CAPTION) ----------
+# ---------- SIDEBAR CONTENT (IMAGE + LINK + BOOK INFO) ----------
 with st.sidebar:
-    st.markdown(f'<div class="sidebar-logo">{_("sidebar_logo")}</div>', unsafe_allow_html=True)
+    # Display the badge image (replace with your own image URL if needed)
+    st.image(
+        "https://raw.githubusercontent.com/Deslandes1/The-Journey-of-the-Be-Like-Brit-Kids/main/badg.jpg",
+        use_container_width=True,
+        caption=""
+    )
     st.markdown("---")
-    st.markdown(f"[{_('sidebar_website')}](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
+    st.markdown(f"[{_('sidebar_website')}](https://belikebrit.org/)")
     st.markdown("---")
     st.markdown(f"### {_('sidebar_book_title')}")
     st.markdown(_("sidebar_book_desc"))
@@ -390,7 +394,6 @@ with st.sidebar:
 
 # ---------- MAIN PAGE ----------
 def main():
-    # Display header with authors
     st.markdown(
         f"""
         <div class="main-header">
@@ -402,13 +405,11 @@ def main():
         unsafe_allow_html=True
     )
     
-    # Chapter selector in sidebar
     chapter_titles = [f"{i+1}. {ch['title']}" for i, ch in enumerate(chapters)]
     selected_idx = st.sidebar.selectbox(_("chapter_selector"), range(len(chapters)), format_func=lambda i: chapter_titles[i])
     
     chapter = chapters[selected_idx]
     
-    # Display the chapter card
     with st.container():
         st.markdown(f'<div class="lesson-card">', unsafe_allow_html=True)
         col_img, col_text = st.columns([1, 2])
@@ -418,7 +419,6 @@ def main():
             st.markdown(f"## {chapter['title']}")
             st.markdown(f'<div class="story-text">{chapter["text"]}</div>', unsafe_allow_html=True)
             
-            # Read Aloud button with visual indicator
             read_btn = st.button(f"{_('read_aloud_button')} ({selected_idx+1})", key=f"read_{selected_idx}")
             if read_btn:
                 indicator = st.empty()
@@ -444,7 +444,6 @@ def main():
                 st.success(_("reading_success"))
         st.markdown('</div>', unsafe_allow_html=True)
     
-    # Footer
     st.markdown(f"""
     <div class="footer">
         <p>© {datetime.now().year} {_('footer_copyright')}</p>
@@ -453,6 +452,5 @@ def main():
     </div>
     """, unsafe_allow_html=True)
 
-# ---------- PAGE ROUTING ----------
 if __name__ == "__main__":
     main()
