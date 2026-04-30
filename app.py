@@ -21,10 +21,6 @@ ui_text = {
         "app_sub": "Inspiring stories of hope, resilience, and love from Haiti – built by Gesner Deslandes",
         "app_authors": "Authored by: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
-        "sidebar_company": "🌐 GlobalInternet.py",
-        "sidebar_founder": "👨‍💻 Gesner Deslandes – Storyteller & Python Builder",
-        "sidebar_phone": "📞 (509) 4738-5663",
-        "sidebar_email": "✉️ deslandes78@gmail.com",
         "sidebar_website": "🌍 Visit our website",
         "sidebar_book_title": "📖 The Journey of the Be Like Brit Kids",
         "sidebar_book_desc": "Inspiring stories of hope, resilience, and love from Haiti",
@@ -43,10 +39,6 @@ ui_text = {
         "app_sub": "Histoires inspirantes d'espoir, de résilience et d'amour d'Haïti – construit par Gesner Deslandes",
         "app_authors": "Auteurs : Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
-        "sidebar_company": "🌐 GlobalInternet.py",
-        "sidebar_founder": "👨‍💻 Gesner Deslandes – Conteur & Constructeur Python",
-        "sidebar_phone": "📞 (509) 4738-5663",
-        "sidebar_email": "✉️ deslandes78@gmail.com",
         "sidebar_website": "🌍 Visitez notre site web",
         "sidebar_book_title": "📖 Le Voyage des Enfants de Be Like Brit",
         "sidebar_book_desc": "Histoires inspirantes d'espoir, de résilience et d'amour d'Haïti",
@@ -65,10 +57,6 @@ ui_text = {
         "app_sub": "Historias inspiradoras de esperanza, resiliencia y amor desde Haití – construido por Gesner Deslandes",
         "app_authors": "Autores: Daya JOACHIM, Guerlanda PIERRE LOUIS, Djoudemie JEAN BAPTISTE, Sandiana SEPTEMBRE",
         "sidebar_logo": "📘",
-        "sidebar_company": "🌐 GlobalInternet.py",
-        "sidebar_founder": "👨‍💻 Gesner Deslandes – Narrador & Constructor Python",
-        "sidebar_phone": "📞 (509) 4738-5663",
-        "sidebar_email": "✉️ deslandes78@gmail.com",
         "sidebar_website": "🌍 Visite nuestro sitio web",
         "sidebar_book_title": "📖 El Viaje de los Niños de Be Like Brit",
         "sidebar_book_desc": "Historias inspiradoras de esperanza, resiliencia y amor desde Haití",
@@ -389,13 +377,9 @@ selected_lang_name = st.sidebar.selectbox(
 st.session_state.lang = lang_options[selected_lang_name]
 chapters = language_map[st.session_state.lang]
 
-# ---------- SIDEBAR CONTENT ----------
+# ---------- SIDEBAR CONTENT (UPDATED: ONLY LOGO, BOOK INFO, WEBSITE LINK, CAPTION) ----------
 with st.sidebar:
     st.markdown(f'<div class="sidebar-logo">{_("sidebar_logo")}</div>', unsafe_allow_html=True)
-    st.markdown(f"## {_('sidebar_company')}")
-    st.markdown(f"**{_('sidebar_founder')}**")
-    st.markdown(_("sidebar_phone"))
-    st.markdown(_("sidebar_email"))
     st.markdown("---")
     st.markdown(f"[{_('sidebar_website')}](https://globalinternetsitepy-abh7v6tnmskxxnuplrdcgk.streamlit.app/)")
     st.markdown("---")
