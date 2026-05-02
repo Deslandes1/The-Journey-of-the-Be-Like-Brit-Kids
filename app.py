@@ -271,11 +271,16 @@ language_map = {
     "es": chapters_es
 }
 
-# ---------- CUSTOM CSS (BLUE THEME) ----------
+# ---------- CUSTOM CSS (LIGHT BLUE BACKGROUND – SAME AS GlobalInternet.py) ----------
 st.markdown("""
 <style>
+    /* Light blue background for the whole app */
     .stApp {
-        background: linear-gradient(135deg, #e6f0ff 0%, #cce4ff 100%);
+        background: linear-gradient(135deg, #e0f0ff 0%, #b8d9ff 100%) !important;
+    }
+    /* Sidebar slightly darker for contrast */
+    [data-testid="stSidebar"] {
+        background-color: rgba(200, 220, 250, 0.95) !important;
     }
     .main-header {
         background: linear-gradient(135deg, #1e3c72, #2a5298);
