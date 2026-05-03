@@ -361,6 +361,45 @@ st.markdown("""
         background-color: #1e3c72;
         transform: scale(1.02);
     }
+
+    /* ----- MOVING TEXT & STARS STYLES ----- */
+    .moving-stars-container {
+        text-align: center;
+        margin-bottom: 1.8rem;
+        padding: 0.5rem;
+    }
+    .moving-stars-text {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        background: linear-gradient(135deg, #ffd89b, #c7e9fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: 0 0 8px rgba(255,215,0,0.5);
+        animation: moveAndShine 1.2s ease-in-out 3;
+        /* three movement cycles */
+    }
+    @keyframes moveAndShine {
+        0% { transform: translateX(0px) scale(1); text-shadow: 0 0 2px gold; }
+        25% { transform: translateX(12px) scale(1.05); text-shadow: 0 0 15px gold; }
+        50% { transform: translateX(-12px) scale(1.05); text-shadow: 0 0 15px gold; }
+        75% { transform: translateX(6px) scale(1.02); text-shadow: 0 0 8px gold; }
+        100% { transform: translateX(0px) scale(1); text-shadow: 0 0 2px gold; }
+    }
+    .star {
+        display: inline-block;
+        font-size: 2rem;
+        margin: 0 0.2rem;
+        animation: twinkle 1.2s infinite alternate;
+    }
+    .star.delay1 { animation-delay: 0.2s; }
+    .star.delay2 { animation-delay: 0.5s; }
+    .star.delay3 { animation-delay: 0.8s; }
+    @keyframes twinkle {
+        0% { opacity: 0.3; text-shadow: 0 0 2px gold; transform: scale(0.8); }
+        100% { opacity: 1; text-shadow: 0 0 15px #ffaa00; transform: scale(1.2); }
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -395,6 +434,17 @@ with st.sidebar:
 
 # ---------- MAIN PAGE ----------
 def main():
+    # ---------- MOVING TEXT WITH SHINING STARS (placed ABOVE main header) ----------
+    st.markdown("""
+    <div class="moving-stars-container">
+        <span class="star">★</span>
+        <span class="star delay1">☆</span>
+        <span class="moving-stars-text">Le's raise the next generations of leaders in Hatiti!</span>
+        <span class="star delay2">★</span>
+        <span class="star delay3">☆</span>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.markdown(
         f"""
         <div class="main-header">
